@@ -1,19 +1,23 @@
 {% extends 'videogames/base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Inicio</h1>
-    <div class="card-group">
+<link href="{% static 'videogames/css/home.css' %}" rel="stylesheet">
+    <h1>Todos los juegos</h1>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
         {% for videojuego in videojuegos %}
-            <div class="card">
-                <img src="media/{{videojuego.image}}" height="250px" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">{{videojuego.title}}</h5>
-                <p class="card-text">{{videojuego.content}}</p>
+        <div class="col mb-4">
+            <div class="card h-100">
+                <img src="media/{{videojuego.image}}" style="max-height: 200px;" alt="...">
+                <div class="card-body" >
+                  <h5 class="card-title">{{videojuego.title}}</h5>
+                  <p class="card-text">{{videojuego.subtitle}}</p>
                 </div>
                 <div class="card-footer">
-                <small class="text-muted">{{videojuego.updated}}</small>
+                  <a href="{% url 'detail' %}">Ver más....</a>
                 </div>
             </div>
+        </div>
         {% endfor %}
     </div>
 {% endblock %}

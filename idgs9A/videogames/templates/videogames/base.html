@@ -11,19 +11,17 @@
     {% load static %}
 
     <!-- Bootstrap -->
-    <link href="{% static 'videogames/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!-- Fuentes -->
-    <link href="{% static 'videogames/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
-    <!-- Estilos -->
-    <link href="{% static 'videogames/css/business-casual.css' %}" rel="stylesheet">
-
   </head>
 
-  <body>
+  <body >
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -46,21 +44,19 @@
 
     <!-- Contenido -->
 
-<div class="container">
-  {% block content %}{% endblock %}
-</div>
+    <div class="container p-4">
+      {% block content %}{% endblock %}
+    </div>
     
 
     <!-- Pié de página -->
-    <footer class="footer text-faded text-center py-5">
+    <footer class="footer text-center py-5">
       <div class="container">
         <p class="m-0 mbt1">&copy; Videojuegos EJL 2022</p>
       </div>
 	  </footer>
 
     <!-- Bootstrap -->
-    <script src="{% static 'videogames/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'videogames/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   </body>
 

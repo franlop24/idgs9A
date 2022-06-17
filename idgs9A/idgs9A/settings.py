@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'videogames', 
-    'services.apps.ServicesConfig',
+    'videogames',
     
 ]
 

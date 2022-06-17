@@ -1,8 +1,14 @@
 {% extends 'videogames/base.html' %}
-
+{% block title %}Inicio{% endblock %}
 {% load static %}
 
 
 {% block content %}
     <h1>Inicio</h1>
+    <h2>daedaeede</h2>
+    {% for videojuego in videojuegos %}
+        <div class="container">   
+            <h2>{{videojuego.content}}</h2>
+        </div>
+    {% endfor %}
 {% endblock %}

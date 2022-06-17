@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-
 class Videogame(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo del Videojuego")
     subtitle = models.CharField(max_length=200, verbose_name="Plataforma")
@@ -12,8 +9,8 @@ class Videogame(models.Model):
     updated=models.DateTimeField(auto_now=True, verbose_name="Fecha de Edicion")
 
     class Meta:
-         verbose_name ="videogames"
-         verbose_name_plural = "videogames"
+         verbose_name ="videojuego"
+         verbose_name_plural = "videojuegos"
          ordering = ['-created']
 
     def __str__(self):

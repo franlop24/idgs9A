@@ -12,3 +12,6 @@ def about(request):
 
 def gameDetail(request):
     return render(request, 'videogames/gameDetail.html')
+
+def games(request):
+    return render(request, 'videogames/games.html')

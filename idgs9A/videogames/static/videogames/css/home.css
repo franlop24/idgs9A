@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 .col .card {
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
@@ -59,15 +60,17 @@
 
 .mensaje .titulo,
 .mensaje .subtitulo {
-    color: #F4F6F6;
+    font-family: 'Poppins', sans-serif;
 }
 
 .mensaje .titulo {
+    color: #adb5bd;
     margin-top: 60px;
     margin-left: 30px;
 }
 
 .mensaje .subtitulo {
+    color: #F4F6F6;
     margin-top: 15px;
     margin-left: 30px;
 }

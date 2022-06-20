@@ -14,4 +14,5 @@ def gameDetail(request):
     return render(request, 'videogames/gameDetail.html')
 
 def games(request):
-    return render(request, 'videogames/games.html')
+    videojuegos = Videogame.objects.all()
+    return render(request, 'videogames/games.html', {'videojuegos' :videojuegos})

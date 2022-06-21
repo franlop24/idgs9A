@@ -10,8 +10,9 @@ class Libro(models.Model):
     ID_libro = models.DateField()
 
 class Usuario(models.Model):
-    Nombre = models.CharField(max_length=50)
-    Apellido = models.CharField(max_length=20)
+    Nombre = models.CharField(max_length=25)
+    ApellidoP = models.CharField(max_length=50)
+    ApellidoM = models.CharField(max_length=50)
     Edad = models.IntegerField()
     Numero_de_usuario = models.IntegerField()
 
@@ -28,3 +29,18 @@ class Obtension_de_libro(models.Model):
     Hora = models.IntegerField()
     Fecha = models.IntegerField()
     Numero_de_Usuario =models.IntegerField()
+
+class Bibliotecario(models.Model):
+    Nombre = models.CharField(max_length=25)
+    ApellidoP = models.CharField(max_length=50)
+    ApellidoM = models.CharField(max_length=50)
+    Edad = models.IntegerField()
+    Numero_de_usuario = models.IntegerField()
+
+class Empleados(models.Model):
+    Nombre = models.CharField(max_length=25)
+    ApellidoP = models.CharField(max_length=50)
+    ApellidoM = models.CharField(max_length=50)
+    Edad = models.IntegerField()
+    Numero_de_empleado = models.IntegerField()
+    Seccion_de_trabajo = models.CharField(max_length=65)

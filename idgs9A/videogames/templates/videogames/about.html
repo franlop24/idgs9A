@@ -1,0 +1,44 @@
+{% extends 'videogames/base.html' %} {% load static %} {% block content %}
+<link href="{% static 'videogames/css/about.css' %}" rel="stylesheet">
+<h1 class="mt-2 mb-4">Nosotros</h1>
+<div class="contenido mt-10">
+    <div class="empresa">
+        <div class="imgLogo">
+            <h3 class="titulo">Galaxy Games</h3>
+            <img src="media/videogames/galaxy_logo.png" class="logotipo">
+        </div>
+        <div class="info">
+            <p class="about">
+                Galaxy Games es una compañía independiente dedicada a la distribución digital de videojuegos, con la idea de en un futuro desarrollar nuestros propios videojuegos e impulsar a mas desarrolladores a hacerlo. La empresa surge tras la combinación de dos
+                de los elementos que nos apasionan al equipo de trabajo de Galaxy Games: Los videojuegos y la programación.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="nosotros">
+        <div class="card" style="width: 18rem;">
+            <img src="https://i.pinimg.com/736x/4e/22/dd/4e22dde80c481b344bbe371fe1c2cf81--eye-legend-of-zelda.jpg" class="card-img-top cardprofile" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Emanuel Rangel Luna</h5>
+                <p class="card-text">T.S.U Desarrollador de Software Multiplataforma</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://avatarfiles.alphacoders.com/242/242417.png" class="card-img-top cardprofile" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Luis Angel Santos Islas</h5>
+                <p class="card-text">T.S.U Desarrollador de Software Multiplataforma</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="http://fazalgfx.weebly.com/uploads/4/6/1/7/46178555/s238582533590803654_p4_i2_w640.png" class="card-img-top cardprofile" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Jonathan Perez Ordoñez</h5>
+                <p class="card-text">T.S.U Desarrollador de Software Multiplataforma</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

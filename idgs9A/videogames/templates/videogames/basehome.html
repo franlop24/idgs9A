@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="media/videogames_logos/galaxy_logo.ico" />
 
     <title>Galaxy Games</title>
 
@@ -48,17 +49,15 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="{% url 'index' %}">
-                <img src="media/videogames/galaxy_logo.png" width="30" height="30" class="d-inline-block align-top logo" alt="">
+                <img src="media/videogames_logos/galaxy_logo.png" width="30" height="30" class="d-inline-block align-top logo" alt="">
             </a>
         </div>
     </nav>
 
     <!-- Contenido -->
 
-    <div class="contenedor">
-        {% block content %}{% endblock %}
-    </div>
 
+        {% block content %}{% endblock %}
 
     <!-- Pié de página -->
     <footer>

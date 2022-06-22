@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('videogames/', include('videogames.urls')),
+    path('series/', include('seriesByRVY.urls')),
 ]

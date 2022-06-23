@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SpotiUTT</title>
+
+    {% load static %}
+    <title>Navbar</title>
+    <link rel="stylesheet" href="{% static 'musica/css/navbar.css' %}">
+</head>
+    <!-- Navegación -->
+    <a class="nav-enlace" href="{% url 'home' %}">Inicio</a>
+    <a class="nav-enlace" href="{% url 'aboutus' %}">Acerca de</a>
+    <a class="nav-enlace" href="{% url 'album' %}">Albums</a>
+    <!-- Contenido -->
+
+    <div class="contenedor">
+        {% block content %}{% endblock %}
+    </div>
+
+
+    <!-- Pié de página -->
+    <footer>
+        <div class="divFooter">
+            </div>
+            <div class="info">
+                <p class="m-0 mbt1 copyrigth">&copy; 2022, SpotiUTT, Inc. Todos los derechos reservados. Ajenos a cualquier partido politico</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+
+</body>
+
+</html>

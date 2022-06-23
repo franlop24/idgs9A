@@ -1,0 +1,43 @@
+{% extends 'Musica/base.html' %} {% load static %} {% block content %}
+<h1 class="mt-2 mb-4">Nosotros</h1>
+<div class="contenido mt-10">
+    <div class="empresa">
+        <div class="imgLogo">
+            <h3 class="titulo">SpotiUTT</h3>
+            <img src="media/musica/spotiutt_logo.png" class="logotipo">
+        </div>
+        <div class="info">
+            <p class="about">
+                SpotiUTT es una tienda de discos de dieferentes artitas a muy buen precio.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="nosotros">
+        <div class="card" style="width: 18rem;">
+            <img src="media/musica/gmail.png" class="card-img-top cardprofile" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Correo Electronico</h5>
+                <p class="card-text">Solo manejamos Gmail</p>
+                <li><a href="mailto:spotiutt@gmail.com">Manda un correo</a></li>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="media/musica/facebook.png" class="card-img-top cardprofile" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Facebook</h5>
+                <li><a href="https://www.facebook.com/">Ver perfil</a></li>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="media/musica/instagram.png" class="card-img-top cardprofile" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Instagram</h5>
+                <li><a href="https://www.instagram.com/">Ver perfil</a></li>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

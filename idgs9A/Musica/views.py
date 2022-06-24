@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -20,6 +19,4 @@ def blog(request):
 def sample(request):
     return HttpResponse("Sample")
 
-=======
 from django.shortcuts import render
->>>>>>> DCM

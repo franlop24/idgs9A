@@ -1,8 +1,12 @@
 {% extends 'core/base.html' %}
 
+{% load static %}
+
 {% block title %}Musica{% endblock %}
 
-{% block content %}
-    <h2>Musica</h2>
-    <p>Bienvenidos.</p>
+{% block background %}{% static 'core/img/musica-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Musica</h1>
+    <span class="subheading">Proyecto de IDGS</span>
 {% endblock %}

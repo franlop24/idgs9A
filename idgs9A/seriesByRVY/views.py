@@ -10,3 +10,6 @@ def seriesList(request):
 
 def detail(request):
     return render(request, 'seriesByRVY/detail.html')
+
+def ejemplo(request):
+    return HttpResponse("Example")

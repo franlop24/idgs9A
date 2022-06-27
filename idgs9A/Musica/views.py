@@ -1,22 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def home(request):
-    return render(request, "musica/home.html")
+def inicio(request):
+    return render(request, "Musica/inicio.html")
 
-def album(request):
-    return render(request, "musica/albums.html")
-
-def store(request):
-    return HttpResponse("Visítanos")
-
-def contact(request):
-        return render(request, "musica/about.html")
+def cancion(request):
+    return render(request, "Musica/cancion.html")
 
 def blog(request):
-    return HttpResponse("Blog")
+        return render(request, "Musica/blog.html")
 
-def sample(request):
-    return HttpResponse("Sample")
+def about(request):
+        return render(request, "Musica/about.html")
+
+def contact(request):
+        return render(request, "Musica/contact.html")
+
 
 from django.shortcuts import render

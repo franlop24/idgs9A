@@ -75,3 +75,9 @@ def seriesList(request):
     return render(request, 'seriesByRVY/seriesList.html', {
         'serie': allSeries
     })
+
+def delete_serie(request, id):
+    serie = Series.objects.get(pk=id)
+    serie.delete()
+
+    return redirect('series')

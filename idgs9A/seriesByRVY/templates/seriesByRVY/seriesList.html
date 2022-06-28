@@ -1,0 +1,23 @@
+{% extends 'seriesByRVY/base.html' %} {% block content %}
+<ul class="serie-list">
+    {% for serie in serie%}
+        <li>
+            <div class="serie-card">
+                <div class="serie-image">
+                    <img src="media/seriesByRVY/{{serie.serie_poster}}" alt="">
+                </div>
+                <div class="title">
+                    <h2>{{serie.serie_name}}</h2>
+                </div>
+                <div class="ranking">
+                    <h4>Temporadas: {{serie.serie_num_temporadas}}</h4>
+                    <h4>Capitulos: {{serie.serie_num_capitulos}}</h4>
+                    <br>
+                    <img src="media/seriesByRVY/star.svg" alt="">
+                    <p>{{serie.serie_ranking}}</p>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

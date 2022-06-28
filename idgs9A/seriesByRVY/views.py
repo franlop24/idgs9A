@@ -76,3 +76,8 @@ def seriesList(request):
         'serie': allSeries
     })
 
+def delete_serie(request, id):
+    serie = Series.objects.get(pk=id)
+    serie.delete()
+
+    return redirect('series')

@@ -14,6 +14,7 @@ urlpatterns = [
     #path('actualizar-serie/<int:id>', views.actualizar_Serie, name="actualizar_Serie"),
     #path('serie-found/<int:id>', views.Serie_Found, name="serie_found"),
     #path('crear-serie/', views.crear_series, name="crear_series"),
+    #path('delete_serie/<int:id>', views.delete_serie, name="delete_serie"),
 ]
 
 if settings.DEBUG:

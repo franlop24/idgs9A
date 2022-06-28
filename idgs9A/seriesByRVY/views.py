@@ -75,3 +75,4 @@ def seriesList(request):
     return render(request, 'seriesByRVY/seriesList.html', {
         'serie': allSeries
     })
+

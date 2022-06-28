@@ -16,5 +16,7 @@ def about(request):
 def contact(request):
         return render(request, "Musica/contact.html")
 
+def album(request):
+        return render(request, "Musica/album.html")
 
 from django.shortcuts import render

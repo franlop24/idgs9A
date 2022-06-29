@@ -1,25 +1,29 @@
 {% extends 'videogames/basehome.html' %} {% load static %} {% block content %}
 <link href="{% static 'videogames/css/home.css' %}" rel="stylesheet">
-<div class="welcome">
-    <div class="imagen">
-        <img src="media/videogames/galaxy_visual.png" class="imgWelcome">
+<div class="row welcome">
+    <div class="col-8 imagen">
+        <img src="media/videogames_logos/galaxy_visual.png" class="imgWelcome">
     </div>
-    <div class="mensaje">
+    <div class="col-4 mensaje">
         <h3 class="titulo">Galaxy Games</h3>
         <h1 class="subtitulo">¡Bienvenido a nuestra página! Esperamos que te guste.</h1>
     </div>
 </div>
 <div class="container p-4">
-    <h1>Todos los juegos</h1>
+    <h1>Juegos Recientes</h1>
     <hr>
     <div class="row row-cols-1 row-cols-md-4 g-4">
         {% for videojuego in videojuegos %}
         <div class="col mb-4">
             <div class="card h-100">
-                <img src="media/{{videojuego.image}}" style="max-height: 200px;" alt="...">
+                <img src="media/{{videojuego.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
                 <div class="card-body">
                     <h5 class="card-title">{{videojuego.title}}</h5>
-                    <p class="card-text">{{videojuego.subtitle}}</p>
+                    <p class="card-text">{{videojuego.genero}}</p>
+                    <i style="color: black;">
+                        {{videojuego.calification}}
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                    </i>
                 </div>
                 <div class="card-footer">
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
@@ -37,12 +41,22 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <img class="rounded mx-auto d-block col-8 col-sm-6" src="media/{{videojuego.image}}" style="max-height: 200px;" alt="...">
+                            <img class="rounded mx-auto d-block col-8 col-sm-6" src="media/{{videojuego.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
                             <div class="col-4 col-sm-6">
                                 <h5>Plataformas</h5>
                                 <p class="card-text">{{videojuego.subtitle}}</p>
+                                <h5>Genero</h5>
+                                <p class="card-text">{{videojuego.genero}}</p>
+                                <h5>Año de lanzamiento</h5>
+                                <p class="card-text">{{videojuego.year}}</p>
                             </div>
                         </div>
+                        <hr>
+                        <h5>Calificación de los usuarios</h5>
+                        <i style="color: black;">
+                            {{videojuego.calification}}
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                        </i>
                         <hr>
                         <h5>Descripción del juego</h5>
                         <p class="card-text text-capitalize">{{videojuego.content}}</p>

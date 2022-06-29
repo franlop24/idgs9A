@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+.col .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.col .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.6);
+}
+
+.col .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.btn-cerrar {
+    background-color: #293241;
+    color: #F4F6F6;
+}
+
+.btn-cerrar:hover {
+    background-color: #3d5a80;
+    color: #000;
+}
+
+.welcome {
+    width: 100%;
+    height: 500px;
+    padding: 0%;
+    background-color: #3d5a80;
+}
+.imagen {
+    height: 500px;
+    background-color: #3d5a80;
+}
+
+.imgWelcome {
+    width: 100%;
+    height: 500px;
+}
+
+.mensaje {
+    margin: 0%;
+    height: 500px;
+    background-color: #293241;
+    border-top-color: #3d5a80;
+    border-top-style: solid;
+    border-width: 2px;
+}
+
+.mensaje .titulo,
+.mensaje .subtitulo {
+    font-family: 'Poppins', sans-serif;
+}
+
+.mensaje .titulo {
+    color: #adb5bd;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.mensaje .subtitulo {
+    color: #F4F6F6;
+    margin-top: 15px;
+    margin-left: 30px;
+}

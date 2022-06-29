@@ -1,35 +1,21 @@
 {% extends 'anime/base.html' %} {% block content %}
+<br>
+<center>
+<a href="registrar-anime">
+    <button style="background-color: yellow; border: 10px; cursor: pointer;">Registrar Anime</button>
+</a>
+</center>
 <ul class="list">
-    <li>
-        <div class="card">
-            <img src="media/anime/test.png" alt="">
-            <h2>El castillo bagabundo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam corrupti fugit magnam aliquam asperiores vero alias animi dolorum velit.</p>
-        </div>
-    </li>
     
+    {% for anime in anime%}
     <li>
         <div class="card">
-            <img src="media/anime/test.png" alt="">
-            <h2>El castillo bagabundo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam corrupti fugit magnam aliquam asperiores vero alias animi dolorum velit.</p>
+            <img src="media/anime/{{anime.imagen_anime}}" alt="">
+            <h2>{{anime.nombre_anime}}a</h2>
+            <p>{{anime.descripcion_anime}}</p>
         </div>
     </li>
 
-    <li>
-        <div class="card">
-            <img src="media/anime/test.png" alt="">
-            <h2>El castillo bagabundo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam corrupti fugit magnam aliquam asperiores vero alias animi dolorum velit.</p>
-        </div>
-    </li>
-
-    <li>
-        <div class="card">
-            <img src="media/anime/test.png" alt="">
-            <h2>El castillo bagabundo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam corrupti fugit magnam aliquam asperiores vero alias animi dolorum velit.</p>
-        </div>
-    </li>
+    {% endfor %}
 </ul>
 {% endblock %}

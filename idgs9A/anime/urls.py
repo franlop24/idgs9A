@@ -6,7 +6,9 @@ from . import views
 
 urlpatterns = [
     path('home', views.home, name='index'),
-    path('animes', views.animes, name='animes'),
+    path('animes', views.listaAnimes, name='animes'),
+    path('registrar-anime/', views.registrar_anime, name="registrar_anime"),
+    path('eliminar-anime/<int:id>', views.borrar_anime)
 ]
 
 if settings.DEBUG:

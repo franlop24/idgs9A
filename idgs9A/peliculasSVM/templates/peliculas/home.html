@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -60,9 +61,10 @@
         </div>
     </div>
 
-    <!--Fijas-->
+    <!--Peliculas-->
     <div class="container p-4 mt-5">
         <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!--Fijas-->
             <div class="col mb-4">
                 <div class="card h-100">
                     <img src="https://www.cinemascomics.com/wp-content/uploads/2022/04/Sonic-2-poster.jpg" style="max-height: 200px;" alt="Imagen no encontrada">
@@ -72,7 +74,7 @@
                         <p class="card-text"><small class="text-muted">2 horas</small></p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="">
                     Ver más....
                   </button>
                     </div>
@@ -88,9 +90,9 @@
                         <p class="card-text"><small class="text-muted">2 horas y media</small></p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
-                    Ver más....
-                  </button>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="">
+                            Ver más....
+                          </button>
                     </div>
                 </div>
             </div>
@@ -104,9 +106,9 @@
                         <p class="card-text"><small class="text-muted">2 horas y 15 minutos</small></p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
-                    Ver más....
-                  </button>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="">
+                            Ver más....
+                          </button>
                     </div>
                 </div>
             </div>
@@ -120,12 +122,59 @@
                         <p class="card-text"><small class="text-muted">2 horas y 27 minutos</small></p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="">
+                            Ver más....
+                          </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Django-->
+            {% for pelicula in peliculas %}
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="media/{{pelicula.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
+                    <div class="card-body">
+                        <h5 class="card-title">{{pelicula.title}}</h5>
+                        <p class="card-text">{{pelicula.subtitle}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{pelicula.id}}">
                     Ver más....
                   </button>
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="exampleModal-{{pelicula.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">{{pelicula.title}}</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <img class="rounded mx-auto d-block col-8 col-sm-6" src="media/{{pelicula.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
+                                <div class="col-4 col-sm-6">
+                                    <h5>Plataforma</h5>
+                                    <p class="card-text">{{pelicula.subtitle}}</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <hr>
+                            <h5>Descripción del juego</h5>
+                            <p class="card-text text-capitalize">{{pelicula.content}}</p>
+                            <hr>
+                            <h5>Post actualizado:</h5>
+                            <p class="card-text">{{pelicula.updated}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 

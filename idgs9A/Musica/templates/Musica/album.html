@@ -1,17 +1,172 @@
-{% extends 'Musica/base.html' %}
-
-{% block title %} Contactanos {% endblock%}
-
-{% block banner%} 
-
+{% extends 'Musica/base.html' %} 
+{% block title %} Álbumes {% endblock%} 
+{%block banner%}
 <section class="banner">
-    <div class="banner-content">
-        <h1>Bienvenido a SPOTI UTT</h1>	
-    </div>
+  <div class="banner-content">
+    <h1>Bienvenido a SPOTI UTT</h1>
+    <h2>Aquí podrás encontrar algunos álbums en existencia</h2>
+  </div>
 </section>
-    {% block contacto %} 
-    {% endblock %}
+{% endblock%} 
+
+{% block tarjetas%}
+
 <div class="title-cards">
-    <h2>Albums</h2>
+  <h2>Algunos Exitos</h2>
 </div>
-{% endblock %}
+<div class="box">
+    <div class="card">
+        <div class="imgBx">
+            <img
+                src="https://reggaetonsinlimite.b-cdn.net/wp-content/uploads/2022/05/UN-VERANO-SIN-TI-.jpg"
+                alt="images"
+            />
+      </div>
+      <div class="details">
+        <h2>Bad Bunny<br /><span>Ojitos lindos</span></h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgBx">
+        <img
+          src="https://i.ytimg.com/vi/wBL1fa_8iOo/maxresdefault.jpg"
+          alt="images"
+        />
+      </div>
+      <div class="details">
+        <h2>Los Caligaris<br /><span>Con vos</span></h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgBx">
+        <img
+          src="https://s.mxmcdn.net/images-storage/albums5/0/9/5/1/7/5/37571590_500_500.jpg"
+          alt="images"
+        />
+      </div>
+      <div class="details">
+        <h2>La La Love You<br /><span>El fin del Mundo</span></h2>
+      </div>
+    </div>
+  </div>
+
+
+<div class="box">
+  <div class="card">
+    <div class="imgBx">
+      <img
+        src="https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/602438491230.jpg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Morat<br /><span>¿A dónde vamos?</span></h2>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img
+        src="https://i.ytimg.com/vi/krmSdpHJO1g/maxresdefault.jpg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Triciclo circus band<br /><span>Adiós adiós</span></h2>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img
+        src="https://i.scdn.co/image/ab67616d0000b2739caea0c14afdebea01524cef"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Sabino<br /><span>Date Cuenta</span></h2>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+<div class="card">
+    <div class="imgBx">
+      <img
+        src="https://m.media-amazon.com/images/I/81dQOdZEiPL._SL1500_.jpg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>José José<br /><span>Secretos</span></h2>
+    </div>
+  </div>
+
+<div class="card">
+    <div class="imgBx">
+      <img
+        src="https://i.discogs.com/xSuxXlxvq7luwiZyWaB0btXBHeEAXynzo9M7a3mUlKg/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY4MDI4/OTUtMTYxMjI3MDM5/Ny05OTcwLm1wbw.jpeg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Juan Gabriel<br /><span>Pensamientos</span></h2>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img
+        src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/d1/50/e6/d150e6b7-cc38-a0b1-2465-32097cef17a7/886445776140.png/1200x1200bf-60.jpg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Dread Mar I<br /><span>10 Años</span></h2>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+<div class="card">
+    <div class="imgBx">
+      <img
+        src="https://www.sopitas.com/wp-content/uploads/2022/05/harry-style-disco-harrys-house.webp?w=1024"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Harry Styles<br /><span>Harry´s House</span></h2>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img
+        src="https://indiehoy.com/wp-content/uploads/2022/02/the-weeknd-dawn-fm.jpg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>The Weekend<br /><span>Dawn FM</span></h2>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="imgBx">
+      <img
+        src="https://m.media-amazon.com/images/I/712U0PCvjES._AC_SX679_.jpg"
+        alt="images"
+      />
+    </div>
+    <div class="details">
+      <h2>Olivia Rodrigo<br /><span>SOUR</span></h2>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock%} 
+{% block footer%} {% endblock%}

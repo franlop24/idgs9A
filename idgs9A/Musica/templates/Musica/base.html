@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'musica/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'musica/css/inicio.css' %}">
     <link rel="stylesheet" href="{% static 'musica/css/cancion.css' %}">
-    <link rel="stylesheet" href="{% static 'musica/css/blogs.css' %}">
+    <link rel="stylesheet" href="{% static 'musica/css/blog.css' %}">
    
     <!--font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -28,7 +28,7 @@
                 <a href="{% url 'inicio' %}">Inicio </a>
                 <a href="{% url 'cancion' %}">Canciones</a>
                 <a href="{% url 'blog' %}">Blog</a>
-                <a href="{% url 'album' %}">Album</a>
+                <a href="{% url 'album' %}">Álbums</a>
                 <a href="{% url 'contact' %}">Contactanos</a>
             </nav>
     </header>
@@ -37,6 +37,7 @@
     {% block cancion%} {% endblock%}
     {% block blog%} {% endblock%}
     {% block contacto %} {% endblock %}
+    {% block album %} {% endblock %}
     
 
 
@@ -53,7 +54,7 @@
             </a>
         </div>
         <div class="contenedor-icono">
-            <a href="http://www.instagram.com" target="_blank" class="instagram">
+            <a href="http://www.instagram.com/"" target="_blank" class="instagram">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>

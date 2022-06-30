@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'videogames.apps.VideogamesConfig',
-    'seriesByRVY.apps.SeriesbyrvyConfig'
+    'seriesByRVY.apps.SeriesbyrvyConfig',
+    'anime'
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Anime App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'anime/index.css' %}">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/anime/home">Home</a></li>
+            <li><p>Anime App</p></li>
+            <li><a href="/anime/animes">Animes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+
+</html>

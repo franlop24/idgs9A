@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('videogames/', include('videogames.urls')),
     path('series/', include('seriesByRVY.urls')),
+    path('anime/', include('anime.urls')),
 ]

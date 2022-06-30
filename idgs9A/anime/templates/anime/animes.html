@@ -1,0 +1,21 @@
+{% extends 'anime/base.html' %} {% block content %}
+<br>
+<center>
+<a href="registrar-anime">
+    <button style="background-color: yellow; border: 10px; cursor: pointer;">Registrar Anime</button>
+</a>
+</center>
+<ul class="list">
+    
+    {% for anime in anime%}
+    <li>
+        <div class="card">
+            <img src="media/anime/{{anime.imagen_anime}}" alt="">
+            <h2>{{anime.nombre_anime}}a</h2>
+            <p>{{anime.descripcion_anime}}</p>
+        </div>
+    </li>
+
+    {% endfor %}
+</ul>
+{% endblock %}

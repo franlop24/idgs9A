@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'videogames.apps.VideogamesConfig',
     'Musica.apps.MusicaConfig',
-    
-    #'services.apps.MusicaConfig',
-    'seriesByRVY.apps.SeriesbyrvyConfig'
+    # 'services.apps.MusicaConfig',
+    'seriesByRVY.apps.SeriesbyrvyConfig',
+    'anime'
 ]
 
 MIDDLEWARE = [

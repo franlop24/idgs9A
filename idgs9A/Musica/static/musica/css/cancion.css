@@ -1,0 +1,45 @@
+    #tarjetas,
+    #redes {
+        display: flex;
+        justify-content: center;
+        background: #efefef;
+    }
+    
+    .tarjeta img {
+        width: 100%;
+        height: 65%;
+    }
+    
+    .tarjeta {
+        width: 20%;
+        margin: 30px 30px 30px 30px;
+        background: #fff;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 1px 1px 11px #00000030;
+    }
+    
+    .tarjeta h2 {
+        font-size: 18px;
+        color: #aaa;
+    }
+    
+    .cancion {
+        font-size: 16px;
+        color: #ccc;
+    }
+    
+    .letra {
+        font-size: 14px;
+    }
+    
+    .cancion {
+        font-size: 16px;
+        color: #ccc;
+    }
+    
+    .letra {
+        font-size: 14px;
+        line-height: 30px;
+        color: black;
+    }

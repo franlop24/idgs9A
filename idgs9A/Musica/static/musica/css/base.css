@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap');
+:root {
+    --verde: #0c443a;
+    --limon: #25d1b2;
+    --degradado: linear-gradient(90deg, var(--limon), var(--verde));
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+*::selection {
+    background: var(--limon);
+    color: white;
+}
+
+html {
+    font-size: 62.4%;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgb(126, 123, 123);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    color: var(--verde);
+}
+
+header .logo span {
+    color: var(--limon);
+}
+
+header .navbar a {
+    font-size: 1.8rem;
+    margin: 2rem;
+    color: var(--verde);
+}
+
+header .navbar a:hover {
+    color: var(--limon);
+    background: limon;
+}
+
+header input {
+    display: none;
+}
+
+header label {
+    font-size: 3rem;
+    color: var(--verde);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #F5F5F5;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-out;
+    background-image: url('../img/image.png');
+    animation: banner 28s infinite linear;
+}
+
+.banner-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner-content a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 9px 20px;
+    border: 1px solid #FFF;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+.banner-content a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Footer */
+
+
+/* ------------------------- */
+
+footer .redes-sociales {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+footer .redes-sociales a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    margin: 20px;
+    text-align: center;
+    border-radius: 100px;
+    transition: .3s ease all;
+}
+
+footer .redes-sociales .twitter {
+    background: #1da1f2;
+}
+
+footer .redes-sociales .facebook {
+    background: #3b5998;
+}
+
+footer .redes-sociales .instagram {
+    background: #c13584;
+}
+
+footer .redes-sociales a i {
+    font-size: 20px;
+    line-height: 60px;
+}
+
+footer .contenedor-icono:hover a {
+    animation: icono .5s ease;
+}
+
+@keyframes banner {
+    0% {
+        background-image: url('../img/1.jpg');
+    }
+    25% {
+        background-image: url('../img/image.png');
+    }
+    26% {
+        background-image: url('../img/image.png');
+    }
+    50% {
+        background-image: url('../img/image.png');
+    }
+    51% {
+        background-image: url('../img/4.jpg');
+    }
+    100% {
+        background-image: url('../img/2.jpeg');
+    }
+}
+
+@media(max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px) {
+    header label {
+        visibility: visible;
+        opacity: 1;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    header .navbar a {
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+    header input:checked~.navbar {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header input:checked~label::before {
+        content: '\f00d';
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 49%;
+    }
+}

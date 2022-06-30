@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     # 'services.apps.MusicaConfig',
     'seriesByRVY.apps.SeriesbyrvyConfig',
     'anime'
+    'seriesByRVY.apps.SeriesbyrvyConfig',
+    'equipoJWN.apps.EquipojwnConfig'
 ]
 
 MIDDLEWARE = [

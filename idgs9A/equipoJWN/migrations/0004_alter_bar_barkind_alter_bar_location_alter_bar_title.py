@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0003_magictown_song_delete_cancion_delete_pueblomagico_and_more'),
+        ('equipoJWN', '0003_magictown_song_delete_cancion_delete_pueblomagico_and_more'),
     ]
 
     operations = [

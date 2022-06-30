@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0006_alter_bar_image_alter_magictown_image_and_more'),
+        ('equipoJWN', '0006_alter_bar_image_alter_magictown_image_and_more'),
     ]
 
     operations = [

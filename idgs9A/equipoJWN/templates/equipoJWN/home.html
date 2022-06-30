@@ -1,10 +1,10 @@
-{% extends 'core/base.html' %}
+{% extends 'equipoJWN/base.html' %}
 
 {% load static %}
 
 {% block title %}Portada{% endblock %}
 
-{% block background %}{% static 'core/img/JWN-bg.jpg' %}{% endblock %}
+{% block background %}{% static 'equipoJWN/img/JWN-bg.jpg' %}{% endblock %}
 
 {% block headers %}
     <h1>Proyecto de IDGS</h1>
@@ -16,7 +16,7 @@
     <div class="row project">   
         <div class="col-lg-3 col-md-4 offset-lg-1">
             <img class="img-fluid" 
-                src="{% static 'core/img/bar-bg.jpg' %}" alt="">
+                src="{% static 'equipoJWN/img/bar-bg.jpg' %}" alt="">
         </div>
         <div class="col-lg-7 col-md-8">
             <h2 class="section-heading title">Bares</h2>   
@@ -29,20 +29,20 @@
     <div class="row project">   
         <div class="col-lg-3 col-md-4 offset-lg-1">
             <img class="img-fluid" 
-                src="{% static 'core/img/musica-bg.jpg' %}" alt="">
+                src="{% static 'equipoJWN/img/musica-bg.jpg' %}" alt="">
         </div>
         <div class="col-lg-7 col-md-8">
             <h2 class="section-heading title">Musica</h2>   
             <p>Una lista de varias canciones y géneros de nuestro 
             agrado para que los consideres, así como recomendaciones 
             y varios otros detallitos de cada canción.</p>
-            <p><a href="{% url 'music' %}">Ver página</a></p>
+            <p><a href="{% url 'songs' %}">Ver página</a></p>
         </div>
     </div>
     <div class="row project">   
         <div class="col-lg-3 col-md-4 offset-lg-1">
             <img class="img-fluid" 
-                src="{% static 'core/img/pueblos_magicos-bg.jpg' %}" alt="">
+                src="{% static 'equipoJWN/img/pueblos_magicos-bg.jpg' %}" alt="">
         </div>
         <div class="col-lg-7 col-md-8">
             <h2 class="section-heading title">Pueblos Magicos</h2>   

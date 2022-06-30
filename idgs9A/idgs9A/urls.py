@@ -26,6 +26,8 @@ urlpatterns = [
     path('videogames/', include('videogames.urls')),
     path('series/', include('seriesByRVY.urls')),
     path('anime/', include('anime.urls')),
+    path('equipoJWN/', include('equipoJWN.urls')),
+
 ]
 
 

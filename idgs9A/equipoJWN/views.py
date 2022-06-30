@@ -8,12 +8,12 @@ def home(request):
 
 def bars(request):
     bars = Bar.objects.all()
-    return render(request, 'equipoJWN/bars.html', {'bars':mediaJWN/bars})
+    return render(request, 'equipoJWN/bars.html', {'bars':bars})
 
 def songs(request):
     songs = Song.objects.all()
-    return render(request, 'equipoJWN/music.html', {'songs':mediaJWN/songs})
+    return render(request, 'equipoJWN/music.html', {'songs':songs})
 
 def towns(request):
     towns = MagicTown.objects.all()
-    return render(request, 'equipoJWN/towns.html', {'towns':mediaJWN/towns})
+    return render(request, 'equipoJWN/towns.html', {'towns':towns})

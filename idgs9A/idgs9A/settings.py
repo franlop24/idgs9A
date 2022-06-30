@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'videogames.apps.VideogamesConfig',
+    'peliculasSVM.apps.PeliculassvmConfig', 
     'Musica.apps.MusicaConfig',
     # 'services.apps.MusicaConfig',
     'seriesByRVY.apps.SeriesbyrvyConfig',

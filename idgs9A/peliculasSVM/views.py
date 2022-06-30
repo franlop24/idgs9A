@@ -7,3 +7,6 @@ def home(request):
 
 def about(request):
     return render(request, 'peliculasSVM/about.html')
+
+def home(request):
+    return render(request, "peliculas/home.html")

@@ -1,0 +1,30 @@
+{% extends 'equipoJWN/base.html' %}
+
+{% load static %}
+
+{% block title %}Bares{% endblock %}
+
+{% block background %}{% static 'equipoJWN/img/bar-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Bares</h1>
+    <span class="subheading">Proyecto de IDGS</span>
+{% endblock %}
+
+{% block content %}
+    {% for Bar in bars %}
+        <!-- Proyecto -->
+        <div class="row project">   
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{Bar.image.url}}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{Bar.title}}</h2>   
+                
+                <p>{{Bar.title}} es un {{Bar.barKind}} ubicado en {{Bar.location}}, 
+                    su menu consiste en {{Bar.menu}}, entre otras cosas mas.</p>
+            
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

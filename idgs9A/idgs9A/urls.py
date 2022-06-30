@@ -28,6 +28,8 @@ urlpatterns = [
     path('peliculasSVM/', include('peliculasSVM.urls')),
     path('series/', include('seriesByRVY.urls')),
     path('anime/', include('anime.urls')),
+    path('equipoJWN/', include('equipoJWN.urls')),
+
 ]
 
 if settings.DEBUG:

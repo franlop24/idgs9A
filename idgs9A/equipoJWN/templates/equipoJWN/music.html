@@ -1,0 +1,31 @@
+{% extends 'equipoJWN/base.html' %}
+
+{% load static %}
+
+{% block title %}Musica{% endblock %}
+
+{% block background %}{% static 'equipoJWN/img/musica-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Musica</h1>
+    <span class="subheading">Proyecto de IDGS</span>
+{% endblock %}
+
+
+{% block content %}
+    {% for Song in songs %}
+        <!-- Proyecto -->
+        <div class="row project">   
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{Song.image.url}}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{Song.title}}</h2>   
+                
+                <p>{{Song.title}} por {{Song.artist}}, del album {{Song.album}} 
+                    dura {{Song.duration}} y es considerado {{Song.genre}}</p>
+            
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

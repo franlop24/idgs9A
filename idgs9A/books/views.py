@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse, redirect
+from books.models import Books, Users
 
 # Create your views here.
 def home(request):

@@ -7,6 +7,10 @@ urlpatterns = [
     path('home', views.home, name='index'),
     path('books', views.books, name='booksList'),
     path('prestamos', views.prestamos, name='prestamos'),
+    path('clientes/', views.users, name="clientes"),
+    path('add-book', views.new_book, name="new_book"),
+    path('new-user/', views.new_user, name="new_user"),
+
 ]
 
 if settings.DEBUG:

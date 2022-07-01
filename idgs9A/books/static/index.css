@@ -85,4 +85,35 @@ nav ul li a:hover{
 svg{
     position: absolute;
     bottom: 0;
+    right: 0;
+}
+
+/* Books */
+
+.books{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-book{
+    width: 300px;
+    height: max-content;
+    background: teal;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.card-book img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-book h3, p{
+    margin: 5px;
 }

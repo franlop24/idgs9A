@@ -8,29 +8,34 @@ def home(request):
 
 
 def prestamos(request):
-    return render(request, 'books/prestamos.html')
+
+    allUsers = Users.objects.filter(user_status = "1")
+
+    return render(request, 'books/prestamos.html', {
+        'user': allUsers
+    })
 
 def new_book(request):
     book = Books(
-        title_book = 'Crepúsculo - La saga',
-        author_book = 'Stephenie Meyer',
-        count_sale_book = '43 millones',
-        image_book = 'crepusculo_saga.jpg'
+        title_book = 'Piense y hágase rico',
+        author_book = 'Napoleón Hill',
+        count_sale_book = '30 millones',
+        image_book = 'piense_y_hagase_rico.jpg'
     )
     book.save()
     return redirect('../books/books')
 
-def new_user():
+def new_user(request):
     user = Users(
-        user_name = 'Adrian',
-        user_lastName = 'Garcia',
-        user_addres = 'San Cosme',
-        user_celphone = '2471055487',
+        user_name = 'Mariana',
+        user_lastName = 'Vasquez',
+        user_addres = 'Tlaxcala',
+        user_celphone = '2474987125',
         reference_bookUser = '',
         user_status = False
     )
     user.save()
-    return redirect('../clientes')
+    return redirect('../books/clientes')
 
 def books(request):
     
@@ -47,4 +52,13 @@ def users(request):
 
     return render(request, 'books/clientes.html', {
         'user': allUsers
+    })
+
+def find_book(request, name_book):
+    
+    findBook = Books.objects.filter(title_book = name_book)
+
+
+    return render(request, 'books/book2.html',{
+        'book': findBook
     })

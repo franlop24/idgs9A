@@ -7,9 +7,10 @@ urlpatterns = [
     path('home', views.home, name='index'),
     path('books', views.books, name='booksList'),
     path('prestamos', views.prestamos, name='prestamos'),
-    path('clientes/', views.users, name="clientes"),
+    path('clientes', views.users, name="clientes"),
     path('add-book', views.new_book, name="new_book"),
-    path('new-user/', views.new_user, name="new_user"),
+    path('add-user', views.new_user, name="new_user"),
+    path('find-book/<str:name_book>', views.find_book, name="find_book"),
 
 ]
 

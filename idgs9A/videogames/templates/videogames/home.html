@@ -1,0 +1,132 @@
+{% extends 'videogames/basehome.html' %} {% load static %} {% block content %}
+<link href="{% static 'videogames/css/home.css' %}" rel="stylesheet">
+<div class="row welcome">
+    <div class="col-8 imagen">
+        <img src="media/videogames_logos/galaxy_visual.png" class="imgWelcome">
+    </div>
+    <div class="col-4 mensaje">
+        <h3 class="titulo">Galaxy Games</h3>
+        <h1 class="subtitulo">¡Bienvenido a nuestra página! Esperamos que te guste.</h1>
+    </div>
+</div>
+<div class="container p-4">
+    <h1>Juegos Recientes</h1>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col mb-4">
+            <div class="card h-100">
+                <img src="media/videogames/fall_guys.jpg" style="max-height: 200px;" alt="Imagen no encontrada">
+                <div class="card-body">
+                    <h5 class="card-title">Fall Guys</h5>
+                    <p class="card-text">Battle royale, Videojuego de plataformas</p>
+                    <i style="color: black;">
+                        5
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                    </i>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-100">
+                    Ver más....
+                  </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal-100" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Fall Guys</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <img class="rounded mx-auto d-block col-8 col-sm-6" src="media/videogames/fall_guys.jpg" style="max-height: 200px;" alt="Imagen no encontrada">
+                            <div class="col-4 col-sm-6">
+                                <h5>Plataformas</h5>
+                                <p class="card-text">Nintendo Switch, PlayStation 4, Xbox One, PlayStation 5, Project Scarlett, Microsoft Windows</p>
+                                <h5>Genero</h5>
+                                <p class="card-text">Battle royale, Videojuego de plataformas</p>
+                                <h5>Año de lanzamiento</h5>
+                                <p class="card-text">2020</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5>Calificación de los usuarios</h5>
+                        <i style="color: black;">
+                            5
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                        </i>
+                        <hr>
+                        <h5>Descripción del juego</h5>
+                        <p class="card-text text-capitalize">Fall Guys: Ultimate Knockout es un videojuego de plataformas y battle royale desarrollado por Mediatonic y publicado inicialmente por Devolver Digital y más tarde por Epic Games. Fue anunciado en la E3 2019​ y fue lanzado para Windows y PlayStation 4 el 4 de agosto del 2020.</p>
+                        <hr>
+                        <h5>Post actualizado:</h5>
+                        <p class="card-text">29 de junio de 2022</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% for videojuego in videojuegos %}
+        <div class="col mb-4">
+            <div class="card h-100">
+                <img src="media/{{videojuego.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
+                <div class="card-body">
+                    <h5 class="card-title">{{videojuego.title}}</h5>
+                    <p class="card-text">{{videojuego.genero}}</p>
+                    <i style="color: black;">
+                        {{videojuego.calification}}
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                    </i>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
+                    Ver más....
+                  </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal-{{videojuego.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">{{videojuego.title}}</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <img class="rounded mx-auto d-block col-8 col-sm-6" src="media/{{videojuego.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
+                            <div class="col-4 col-sm-6">
+                                <h5>Plataformas</h5>
+                                <p class="card-text">{{videojuego.subtitle}}</p>
+                                <h5>Genero</h5>
+                                <p class="card-text">{{videojuego.genero}}</p>
+                                <h5>Año de lanzamiento</h5>
+                                <p class="card-text">{{videojuego.year}}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5>Calificación de los usuarios</h5>
+                        <i style="color: black;">
+                            {{videojuego.calification}}
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                        </i>
+                        <hr>
+                        <h5>Descripción del juego</h5>
+                        <p class="card-text text-capitalize">{{videojuego.content}}</p>
+                        <hr>
+                        <h5>Post actualizado:</h5>
+                        <p class="card-text">{{videojuego.updated}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

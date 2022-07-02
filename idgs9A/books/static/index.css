@@ -117,3 +117,37 @@ svg{
 .card-book h3, p{
     margin: 5px;
 }
+
+table{
+    width: 80%;
+    margin: 20px auto;
+    background: teal;
+}
+
+thead{
+    background: #003e43;
+    color: #fff;
+}
+
+td{
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+    background: rgba(87, 163, 163, 0.499);
+}
+
+.btn-libro button{
+    background: transparent;
+    border: solid 1px #fff;
+    padding: 3px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out all;
+}
+
+.btn-libro button:hover{
+    background: #fff;
+    color: teal;
+}

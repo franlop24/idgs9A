@@ -1,0 +1,26 @@
+{% extends 'books/base.html' %} {% block content %}
+<h1>Listado de Clientes: </h1>
+    <center>
+    
+    <table>
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Direccion</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for user in user%}
+          <tr>
+            <th scope="row">{{user.user_name}}</th>
+            <td>{{user.user_lastName}}</td>
+            <td>{{user.user_celphone}}</td>
+            <td>--{{user.user_addres}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </center>
+{% endblock %}

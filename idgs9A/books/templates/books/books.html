@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %} {% block content %}
+
+<div class="books">
+    {% for book in book %}
+    <div class="card-book">
+        <img src="media/books/{{book.image_book}}" alt="">
+        <h2>Libro: {{book.title_book}}
+        <h3>Autor: {{book.author_book}}</h3>
+        <p>Copias vendidas: {{book.count_sale_book}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

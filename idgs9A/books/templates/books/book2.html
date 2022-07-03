@@ -1,0 +1,13 @@
+{% extends 'books/base.html' %} {% block content %}
+<h1>Libro prestado:</h1>
+<div class="books">
+    {% for book in book %}
+    <div class="card-book">
+        
+        <h2>Libro: {{book.title_book}}
+        <h3>Autor: {{book.author_book}}</h3>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

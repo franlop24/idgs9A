@@ -1,0 +1,65 @@
+{% extends 'videogames/base.html' %} {% load static %} {% block content %}
+<link href="{% static 'videogames/css/home.css' %}" rel="stylesheet">
+<h1>Todos los juegos</h1>
+<hr>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for videojuego in videojuegos %}
+    <div class="col mb-4">
+        <div class="card h-100">
+            <img src="media/{{videojuego.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
+            <div class="card-body">
+                <h5 class="card-title">{{videojuego.title}}</h5>
+                <p class="card-text">{{videojuego.genero}}</p>
+                <i style="color: black;">
+                    {{videojuego.calification}}
+                    <i class="fas fa-star" style="color: yellow;"></i>
+                </i>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal-{{videojuego.id}}">
+                Ver más....
+              </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal-{{videojuego.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">{{videojuego.title}}</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <img class="rounded mx-auto d-block col-8 col-sm-6" src="media/{{videojuego.image}}" style="max-height: 200px;" alt="Imagen no encontrada">
+                        <div class="col-4 col-sm-6">
+                            <h5>Plataformas</h5>
+                            <p class="card-text">{{videojuego.subtitle}}</p>
+                            <h5>Genero</h5>
+                            <p class="card-text">{{videojuego.genero}}</p>
+                            <h5>Año de lanzamiento</h5>
+                            <p class="card-text">{{videojuego.year}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Calificación de los usuarios</h5>
+                    <i style="color: black;">
+                        {{videojuego.calification}}
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                    </i>
+                    <hr>
+                    <h5>Descripción del juego</h5>
+                    <p class="card-text text-capitalize">{{videojuego.content}}</p>
+                    <hr>
+                    <h5>Post actualizado:</h5>
+                    <p class="card-text">{{videojuego.updated}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

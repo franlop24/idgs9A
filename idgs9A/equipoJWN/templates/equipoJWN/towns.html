@@ -1,0 +1,32 @@
+{% extends 'equipoJWN/base.html' %}
+
+{% load static %}
+
+{% block title %}Pueblos Magicos{% endblock %}
+
+{% block background %}{% static 'equipoJWN/img/pueblos_magicos-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Pueblos magicos</h1>
+    <span class="subheading">Proyecto de IDGS</span>
+{% endblock %}
+
+{% block content %}
+    {% for Magictown in towns %}
+        <!-- Proyecto -->
+        <div class="row project">   
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{Magictown.image.url}}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{Magictown.title}}</h2>   
+
+                <p>El pueblo {{Magictown.title}} de esta ubicado en {{Magictown.state}}, 
+                    sabias que {{Magictown.description}}</p>
+                <p>¿Cuenta con hospedaje? {{Magictown.accommodation}}</p>
+                <p>¿Cuenta con Zonas culturales? {{Magictown.culturalZones}}</p>
+
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+    background: #003e43;
+    box-shadow: 0 3px 9px #0000006e;
+}
+
+nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 12px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover{
+    color: orange;
+}
+
+.container{
+    width: 95%;
+    margin: 30px auto 0 auto;
+}
+
+/* Home */
+
+.home{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .image{
+    width: 200px;
+    height: 200px;
+}
+
+.home .image img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.home .desc{
+    width: 80%;
+    background: teal;
+    padding: 12px;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home .desc h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.home .desc p{
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 28px;
+}
+
+svg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Books */
+
+.books{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-book{
+    width: 300px;
+    height: max-content;
+    background: teal;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.card-book img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-book h3, p{
+    margin: 5px;
+}
+
+table{
+    width: 80%;
+    margin: 20px auto;
+    background: teal;
+}
+
+thead{
+    background: #003e43;
+    color: #fff;
+}
+
+td{
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+    background: rgba(87, 163, 163, 0.499);
+}
+
+.btn-libro button{
+    background: transparent;
+    border: solid 1px #fff;
+    padding: 3px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out all;
+}
+
+.btn-libro button:hover{
+    background: #fff;
+    color: teal;
+}

@@ -1,0 +1,55 @@
+{% extends 'equipoJWN/base.html' %}
+
+{% load static %}
+
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% static 'equipoJWN/img/JWN-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Proyecto de IDGS</h1>
+    <span class="subheading">Jose Luis, Wendy, Nelly</span>
+{% endblock %}
+
+{% block content %}
+    <!-- Links to templates -->
+    <div class="row project">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" 
+                src="{% static 'equipoJWN/img/bar-bg.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">Bares</h2>   
+            <p>Una lista de bares en todo el estado de Tlaxcala,
+            y las características de cada uno para compararlos 
+            fácilmente y encontrar el adecuado para ti y tus amigos.</p>
+            <p><a href="{% url 'bars' %}">Ver página</a></p>
+        </div>
+    </div>
+    <div class="row project">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" 
+                src="{% static 'equipoJWN/img/musica-bg.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">Musica</h2>   
+            <p>Una lista de varias canciones y géneros de nuestro 
+            agrado para que los consideres, así como recomendaciones 
+            y varios otros detallitos de cada canción.</p>
+            <p><a href="{% url 'songs' %}">Ver página</a></p>
+        </div>
+    </div>
+    <div class="row project">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" 
+                src="{% static 'equipoJWN/img/pueblos_magicos-bg.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">Pueblos Magicos</h2>   
+            <p>Una lista de pueblos magicos en el paiz de Mexico,
+            y las características de cada uno para compararlos fácilmente 
+            y encontrar el mas conveniente para tus sigientes vacaciones.</p>
+            <p><a href="{% url 'towns' %}">Ver página</a></p>
+        </div>
+    </div>
+{% endblock %}

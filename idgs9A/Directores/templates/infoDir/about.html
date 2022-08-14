@@ -80,6 +80,14 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .pic {
+        height: 400px;
+        width: 400px;
+       }
     </style>
 
   </head>
@@ -88,8 +96,26 @@
 <header>
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom">
-           <span class="fs-4">JAH - Contacto Personal</span>
-          </a>
+          <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="http://127.0.0.1:8000">JAH - Pelicula</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/peli/">Peliculas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Directores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/about/">Acerca de</a>
+                  </li>
+                </div>
+            </div>
+          </nav>
         </header>
 </header>
 
@@ -124,25 +150,28 @@
 
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2 class="fw-normal">Astrid de Galindo Gonzales</h2>
+        <div class='pic'>
+          <img src='https://m.media-amazon.com/images/I/518yhz8M3gL._AC_SY606_.jpg'>
+        </div>
+        <h2 class="fw-normal">Astrid de Galindo Gonzalez</h2>
         <p>Formacion academica</p>
-        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/5.2/examples/carousel/#">Contacto »</a></p>
+        <p><a class="btn btn-secondary" href="https://www.facebook.com/yadis.astrid.7">Contacto »</a></p>
       </div>
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2 class="fw-normal">Jonathan Galindo Gonzales</h2>
+        <div class='pic'>
+        <img src='https://m.media-amazon.com/images/I/51X5VwI-IDL._AC_SY741_.jpg'>
+        </div>
+        <h2 class="fw-normal">Jonathan Galindo Gonzalez</h2>
         <p>Formacion academica</p>
-        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/5.2/examples/carousel/#">Contacto »</a></p>
+        <p><a class="btn btn-secondary" href="https://www.facebook.com/jonat.SanchezR">Contacto »</a></p>
       </div>
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
+        <div class='pic'>
+       <img src='https://m.media-amazon.com/images/I/61WIuhhgNdL._AC_SX466_.jpg'>
+        </img>
         <h2 class="fw-normal">Horacio Carmona Sanchez</h2>
         <p>Formacion academica</p>
-        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/5.2/examples/carousel/#">Contacto »</a></p>
+        <p><a class="btn btn-secondary" href="https://www.facebook.com/Januslds">Contacto »</a></p>
      
       </div>
     </div>

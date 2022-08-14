@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # App Installs
     'core.apps.CoreConfig',
+    'Directores.apps.DirectoresConfig',
     
     # Django Installs
     'django.contrib.admin',

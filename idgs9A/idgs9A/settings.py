@@ -34,7 +34,12 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # App Installs
     'core.apps.CoreConfig',
-    
+    'Directores.apps.DirectoresConfig',
+    'seriesByRVY.apps.SeriesbyrvyConfig',
+    'videogames.apps.VideogamesConfig',
+    'peliculasSVM.apps.PeliculassvmConfig', 
+    'equipoJWN.apps.EquipojwnConfig'
+    'Musica.apps.MusicaConfig',
     # Django Installs
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,14 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books',
-    'videogames.apps.VideogamesConfig',
-    'peliculasSVM.apps.PeliculassvmConfig', 
-    'Musica.apps.MusicaConfig',
-    # 'services.apps.MusicaConfig',
-    'seriesByRVY.apps.SeriesbyrvyConfig',
     'anime'
-    'seriesByRVY.apps.SeriesbyrvyConfig',
-    'equipoJWN.apps.EquipojwnConfig'
 ]
 
 MIDDLEWARE = [

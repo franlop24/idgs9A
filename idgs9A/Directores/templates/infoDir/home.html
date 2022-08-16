@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://getbootstrap.com/docs/5.2/examples/jumbotron/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Peliculas</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"><!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link href="./Jumbotron example · Bootstrap v5.2_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      img{
+        max-width: 50%;
+        max-height: 50%;
+        float:right;
+        margin-right: 20px;
+      }
+      .pic {
+        height: ;
+        width: 1000px;
+        clear:right;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-right: 200px;
+       }
+    </style>
+</head>
+ 
+<body>
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="http://127.0.0.1:8000">JAH - Pelicula</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/peli/">Peliculas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Directores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/about/">Acerca de</a>
+                  </li>
+                </div>
+            </div>
+          </nav>
+      
+    </header>
+
+    <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div class="col-md-6 px-0" >
+          <h1 class="display-4 fst-italic">Mejores peliculas... </h1>
+          <div class="pic">
+            <img src="https://laestatuilla.com/wp-content/uploads/2020/09/Christopher-Nolan-Ranking.jpg" >
+            <p>El placer de la mirada, el gusto de ver películas, de gozar del llamado séptimo arte, es el tema de este número, que desde muchos puntos de vista nos invita a celebrar los momentos donde confluyen imagen, técnica, acción, pesadillas, sueños. </p>
+       </div>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Dime mas..</a></p>
+        </div>
+      </div>
+       <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">James Cameron</strong>
+              <h3 class="mb-0">Avatar</h3>
+              <div class="mb-1 text-muted">Julio 2022</div>
+             
+              <p class="card-text mb-auto">Jake Sully y Neytiri han formado una familia tras todo lo vivido en la primera entrega y están dispuestos a hacer lo que sea por seguir juntos. El problema es que una antigua amenaza reaparece con el objetivo de completar su trabajo, por lo que se ven obligados a abandonar su hogar y explotar nuevas regiones de Pandora.</p>
+              <a href="#" class="stretched-link">Leer mas...</a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Michell Bay</strong>
+              <h3 class="mb-0">Transformers: el despertar de las bestias</h3>
+              <div class="mb-1 text-muted">Junio 2023</div>
+              <p class="mb-auto">Por el momento lo que se conoce del argumento de esta nueva película de acción es que se ubicará en el año 1994 y su protagonismo recaerá en Noah, un exmilitar que es un genio de la tecnología, y Elena, una investigadora de un museo. La acción se irá desarrollando a lo largo de la película en las localizaciones de Brooklyn, Nueva York y Machu Picchu, en Perú.</p>
+              <a href="#" class="stretched-link">Leer mas..</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="https://i.blogs.es/e92eec/avatar-el-sentido-del-agua/450_1000.jpeg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</main>
+</body></html>

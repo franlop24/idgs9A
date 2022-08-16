@@ -17,7 +17,6 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 from core import views
-
 from . import settings
 
 urlpatterns = [
@@ -30,6 +29,7 @@ urlpatterns = [
     path('series/', include('seriesByRVY.urls')),
     path('anime/', include('anime.urls')),
     path('equipoJWN/', include('equipoJWN.urls')),
+    path('peli/',include('Directores.urls')),
 ]
 
 if settings.DEBUG:

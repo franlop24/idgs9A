@@ -1,6 +1,8 @@
 from django.db import models
 from django.forms import model_to_dict
 
+from django.db import models
+
 # Create your models here.
 
 class Libro(models.Model):
@@ -44,3 +46,4 @@ class Empleados(models.Model):
     Edad = models.IntegerField()
     Numero_de_empleado = models.IntegerField()
     Seccion_de_trabajo = models.CharField(max_length=65)
+
